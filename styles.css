@@ -1,0 +1,11 @@
+.inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputsWidth {
+    width: 50%;
+    padding: 5px;
+    margin: 5px;
+}
