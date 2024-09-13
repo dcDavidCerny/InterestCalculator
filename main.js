@@ -147,10 +147,18 @@ document.getElementById("submitInput").addEventListener("click", function (event
       plugins: {
         tooltip: {
           titleFont: {
-            size: 17
+            size: 25
           },
           bodyFont: {
-            size: 21
+            size: 25
+          }
+        },
+        legend: {
+          labels: {
+            font: {
+              size: 25,
+              family: `sans-serif`
+            }
           }
         }
       }
