@@ -72,10 +72,11 @@ document.getElementById("submitInput").addEventListener("click", function (event
     totalDepositted2 += monthlyDeposit2 * 12;
   }
 
-
-  document.querySelector(".totalToWithdrawResult").innerHTML = Math.round(total);
-  document.querySelector(".totalDeposittedResult").innerHTML = Math.round(totalDepositted);
-  document.querySelector(".percentageGainResult").innerHTML = Math.round(((total - totalDepositted) / totalDepositted) * 100) + "%";
+  let investmentName = document.getElementById("nameOfInvestment").value;
+  let investmentName2 = document.getElementById("nameOfInvestment2").value;
+  document.querySelector(".totalToWithdrawResult2").innerHTML = Math.round(total);
+  document.querySelector(".totalDeposittedResult2").innerHTML = Math.round(totalDepositted);
+  document.querySelector(".percentageGainResult2").innerHTML = Math.round(((total - totalDepositted) / totalDepositted) * 100) + "%";
 
 
 
@@ -112,13 +113,14 @@ document.getElementById("submitInput").addEventListener("click", function (event
     type: 'line',
     data: {
       labels: labels,
+
       datasets: [{
-        label: `spoření 1`,
+        label: `${investmentName}`,
         data: everyYearTotal,
         borderWidth: 5
       },
       {
-        label: `spoření 2`,
+        label: `${investmentName2}`,
         data: everyYearTotal2,
         borderWidth: 5
       }]

@@ -32,6 +32,24 @@
     margin-right: 10px;
 }
 
+.results {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.leftResults {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1;
+}
+
+.rightResults {
+    display: flex;
+    flex-direction: column;
+    grid-column: 2;
+}
+
 #investmentDuration {
     margin-top: 20px;
 }
