@@ -42,11 +42,11 @@ document.getElementById("submitInput").addEventListener("click", function (event
   document.querySelector(".nameOfInvestmentH3A").innerHTML = document.getElementById("nameOfInvestment").value + ":";
   document.querySelector(".nameOfInvestmentH3B").innerHTML = document.getElementById("nameOfInvestment2").value + ":";
 
-  if (document.querySelector(".nameOfInvestmentH3A").innerHTML === ":") {
+  if (document.getElementById("nameOfInvestment").value === "") {
     document.querySelector(".nameOfInvestmentH3A").innerHTML = "Modrá investice:";
   }
 
-  if (document.querySelector(".nameOfInvestmentH3B").innerHTML === ":") {
+  if (document.getElementById("nameOfInvestment2").value === "") {
     document.querySelector(".nameOfInvestmentH3B").innerHTML = "Červená investice:";
   }
 
