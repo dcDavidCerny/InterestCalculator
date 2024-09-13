@@ -10,18 +10,77 @@
 </head>
 
 <body>
-  <div class="inputs">
-    <input type="number" id="firstDeposit" class="inputsWidth" placeholder="First deposit amount">
-    <input type="number" id="monthlyDeposit" class="inputsWidth" placeholder="Monthly deposit amount">
-    <input type="number" id="interestRate" class="inputsWidth" placeholder="Enter an interest rate %">
-    <input type="number" id="investmentDuration" class="inputsWidth" placeholder="Enter a time range in years">
-    <input type="number" id="tax1" class="inputsWidth" placeholder="Enter some first tax">
-    <input type="number" id="tax2" class="inputsWidth" placeholder="Enter some second tax">
-    <input type="submit" id="submitInput" class="inputsWidth" value="Create and dowload the Chart">
+  <div class="container">
+    <!-- Left Column -->
+    <div class="left-column">
+      <div class="input-group">
+        <label for="firstDeposit">First Deposit:</label>
+        <input type="number" id="firstDeposit" class="inputsWidth" placeholder="First deposit amount" value="1000">
+      </div>
+      <div class="input-group">
+        <label for="monthlyDeposit">Monthly Deposit:</label>
+        <input type="number" id="monthlyDeposit" class="inputsWidth" placeholder="Monthly deposit amount" value="0">
+      </div>
+      <div class="input-group">
+        <label for="interestRate">Interest Rate (%):</label>
+
+        <input type="number" id="interestRate" class="inputsWidth" placeholder="Enter an interest rate %" value="5">
+      </div>
+      <div class="input-group">
+        <label for="depositFee">First Tax:</label>
+
+        <input type="number" id="depositFee" class="inputsWidth" placeholder="Enter some first tax" value="0">
+      </div>
+      <div class="input-group">
+        <label for="feeYearly">Second Tax:</label>
+        <input type="number" id="feeYearly" class="inputsWidth" placeholder="Enter some second tax" value="0">
+      </div>
+    </div>
+
+    <!-- Right Column -->
+    <div class="right-column">
+
+      <input type="number" id="firstDeposit2" class="inputsWidth" placeholder="First deposit amount" value="1000">
+
+
+      <input type="number" id="monthlyDeposit2" class="inputsWidth" placeholder="Monthly deposit amount" value="0">
+
+
+      <input type="number" id="interestRate2" class="inputsWidth" placeholder="Enter an interest rate %" value="5">
+
+
+      <input type="number" id="depositFee2" class="inputsWidth" placeholder="Enter some first tax" value="0">
+
+
+      <input type="number" id="feeYearly2" class="inputsWidth" placeholder="Enter some second tax" value="0">
+
+    </div>
   </div>
 
+  <div class="centerPls">
 
-  <script type="module" src="/main.js"></script>
+    <div class="input-group">
+      <label for="investmentDuration">Investment Duration:</label>
+      <input type="number" id="investmentDuration" placeholder="Enter the duration in years" value="10">
+    </div>
+
+    <input type="submit" id="submitInput" class="inputsWidth" value="Vytvořit graf"
+      style="display: block; margin: 20px auto;">
+  </div>
+  <div class="totalDeposittedResult">
+  </div>
+  <div class="totalToWithdrawResult">
+  </div>
+  <div class="percentageGainResult">
+  </div>
+  <div class="canvas">
+    <div class="canvas2">
+      <canvas id="myChart"></canvas>
+    </div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 
 </html>
