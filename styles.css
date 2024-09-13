@@ -1,5 +1,5 @@
 body {
-    background-color: aliceblue;
+    background-color: rgb(239, 247, 255);
     margin: 0px;
 }
 
@@ -12,10 +12,9 @@ body {
 
 .extraContainer {
     background-color: white;
-    border-radius: 5px;
     border: 1px solid lightgray;
     padding: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
 }
 
 .left-column,
@@ -49,6 +48,10 @@ body {
     margin: 10px;
 }
 
+.input-groupResults label {
+    visibility: hidden;
+}
+
 .input-group label {
     width: 150px;
     font-weight: bold;
@@ -66,6 +69,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.nameOfInvestmentH3A {
+    color: rgb(54, 139, 213);
+}
+
+.nameOfInvestmentH3B {
+    color: rgba(255, 20, 78, 0.85);
 }
 
 .results {
@@ -122,8 +133,11 @@ body {
     align-items: center;
     justify-content: center;
     margin-top: 100px;
+    background-color: aliceblue;
 }
 
 .canvas2 {
     width: 66%;
+    background-color: aliceblue;
+
 }

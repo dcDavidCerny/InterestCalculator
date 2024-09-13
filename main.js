@@ -34,6 +34,14 @@ document.getElementById("submitInput").addEventListener("click", function (event
   document.querySelector(".totalDeposittedResult").innerHTML = Math.round(totalDepositted);
   document.querySelector(".percentageGainResult").innerHTML = Math.round(((total - totalDepositted) / totalDepositted) * 100) + "%";
 
+  document.querySelectorAll("#resultLabel").forEach((label) => {
+    label.style.visibility = "visible";
+  });
+
+  document.querySelector(".nameOfInvestmentH3A").innerHTML = document.getElementById("nameOfInvestment").value + ":";
+  document.querySelector(".nameOfInvestmentH3B").innerHTML = document.getElementById("nameOfInvestment2").value + ":";
+
+
   // Second investment inputs
   let firstDeposit2 = document.getElementById("firstDeposit2").value;
   let monthlyDeposit2 = document.getElementById("monthlyDeposit2").value;
@@ -85,12 +93,14 @@ document.getElementById("submitInput").addEventListener("click", function (event
       datasets: [{
         label: `${investmentName}`,
         data: everyYearTotal,
-        borderWidth: 5
+        borderWidth: 5,
+        borderColor: "rgb(54, 139, 213)"
       },
       {
         label: `${investmentName2}`,
         data: everyYearTotal2,
-        borderWidth: 5
+        borderWidth: 5,
+        borderColor: "rgba(255, 20, 78, 0.85)"
       }]
     },
     options: {
