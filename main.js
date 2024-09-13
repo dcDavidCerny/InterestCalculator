@@ -1,6 +1,11 @@
 import Chart from 'chart.js/auto';
+
+let chartInstance; // Declare chartInstance globally
+
 document.getElementById("submitInput").addEventListener("click", function (event) {
   event.preventDefault();
+
+  // First investment inputs
   let firstDeposit = document.getElementById("firstDeposit").value;
   let monthlyDeposit = document.getElementById("monthlyDeposit").value;
   let interestRate = document.getElementById("interestRate").value;
@@ -9,10 +14,10 @@ document.getElementById("submitInput").addEventListener("click", function (event
   let feeYearly = document.getElementById("feeYearly").value;
   const rate = interestRate / 100;
 
+  // Calculate first investment totals
   let total = 0;
   let everyYearTotal = [];
-  total += firstDeposit;
-  total -= Depositfee;
+  total += firstDeposit - Depositfee;
   let totalDepositted = Number(firstDeposit);
 
   for (let i = 0; i < investmentDuration; i++) {
@@ -24,32 +29,12 @@ document.getElementById("submitInput").addEventListener("click", function (event
     totalDepositted += monthlyDeposit * 12;
   }
 
-
+  // Display first investment results
   document.querySelector(".totalToWithdrawResult").innerHTML = Math.round(total);
   document.querySelector(".totalDeposittedResult").innerHTML = Math.round(totalDepositted);
   document.querySelector(".percentageGainResult").innerHTML = Math.round(((total - totalDepositted) / totalDepositted) * 100) + "%";
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  // Second investment inputs
   let firstDeposit2 = document.getElementById("firstDeposit2").value;
   let monthlyDeposit2 = document.getElementById("monthlyDeposit2").value;
   let interestRate2 = document.getElementById("interestRate2").value;
@@ -57,10 +42,10 @@ document.getElementById("submitInput").addEventListener("click", function (event
   let feeYearly2 = document.getElementById("feeYearly2").value;
   const rate2 = interestRate2 / 100;
 
+  // Calculate second investment totals
   let total2 = 0;
   let everyYearTotal2 = [];
-  total2 += firstDeposit2;
-  total2 -= Depositfee2;
+  total2 += firstDeposit2 - Depositfee2;
   let totalDepositted2 = Number(firstDeposit2);
 
   for (let i = 0; i < investmentDuration; i++) {
@@ -72,48 +57,31 @@ document.getElementById("submitInput").addEventListener("click", function (event
     totalDepositted2 += monthlyDeposit2 * 12;
   }
 
+  // Display second investment results
+  document.querySelector(".totalToWithdrawResult2").innerHTML = Math.round(total2);
+  document.querySelector(".totalDeposittedResult2").innerHTML = Math.round(totalDepositted2);
+  document.querySelector(".percentageGainResult2").innerHTML = Math.round(((total2 - totalDepositted2) / totalDepositted2) * 100) + "%";
+
+  // Define investment names
   let investmentName = document.getElementById("nameOfInvestment").value;
   let investmentName2 = document.getElementById("nameOfInvestment2").value;
-  document.querySelector(".totalToWithdrawResult2").innerHTML = Math.round(total);
-  document.querySelector(".totalDeposittedResult2").innerHTML = Math.round(totalDepositted);
-  document.querySelector(".percentageGainResult2").innerHTML = Math.round(((total - totalDepositted) / totalDepositted) * 100) + "%";
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  // Chart initialization
   const ctx = document.getElementById('myChart');
 
   const labels = [];
   for (let i = 1; i <= investmentDuration; i++) {
     labels.push(`${i}. Rok`);
   }
+
   if (chartInstance) {
-    chartInstance.destroy();
+    chartInstance.destroy(); // Destroy the previous chart
   }
+
   chartInstance = new Chart(ctx, {
     type: 'line',
     data: {
       labels: labels,
-
       datasets: [{
         label: `${investmentName}`,
         data: everyYearTotal,
@@ -127,19 +95,32 @@ document.getElementById("submitInput").addEventListener("click", function (event
     },
     options: {
       scales: {
+        x: {
+          ticks: {
+            font: {
+              size: 22
+            }
+          }
+        },
         y: {
-          beginAtZero: true
+          beginAtZero: true,
+          ticks: {
+            font: {
+              size: 22
+            }
+          }
+        }
+      },
+      plugins: {
+        tooltip: {
+          titleFont: {
+            size: 17
+          },
+          bodyFont: {
+            size: 21
+          }
         }
       }
     }
   });
-
-
-
-
-
-
-
 });
-
-let chartInstance = null;

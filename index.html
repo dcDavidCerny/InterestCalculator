@@ -10,116 +10,146 @@
 </head>
 
 <body>
-  <div class="container">
-    <!-- Left Column -->
-    <div class="left-column">
-      <div class="input-group">
-        <label for="nameOfInvestment">Name Investment:</label>
-        <input type="text" id="nameOfInvestment" class="inputsWidth" placeholder="Name Of Investment">
-      </div>
-      <div class="input-group">
-        <label for="firstDeposit">First Deposit:</label>
-        <input type="number" id="firstDeposit" class="inputsWidth" placeholder="First deposit amount" value="1000">
-      </div>
-      <div class="input-group">
-        <label for="monthlyDeposit">Monthly Deposit:</label>
-        <input type="number" id="monthlyDeposit" class="inputsWidth" placeholder="Monthly deposit amount" value="0">
-      </div>
-      <div class="input-group">
-        <label for="interestRate">Interest Rate (%):</label>
+  <div class="extraContainer">
+    <div class="container">
+      <!-- Left Column -->
+      <div class="left-column">
+        <div class="input-group">
+          <label for="nameOfInvestment">Jméno Investice:</label>
+          <input type="text" id="nameOfInvestment" class="inputsWidth" placeholder="Name Of Investment">
+        </div>
+        <div class="input-group">
+          <label for="firstDeposit">Vstupní Vklad:</label>
+          <input type="number" id="firstDeposit" class="inputsWidth" placeholder="First deposit amount" value="1000">
+        </div>
+        <div class="input-group">
+          <label for="monthlyDeposit">Měsíční Vklad:</label>
+          <input type="number" id="monthlyDeposit" class="inputsWidth" placeholder="Monthly deposit amount" value="0">
+        </div>
+        <div class="input-group">
+          <label for="interestRate">Zhodnocení (%):</label>
 
-        <input type="number" id="interestRate" class="inputsWidth" placeholder="Enter an interest rate %" value="5">
-      </div>
-      <div class="input-group">
-        <label for="depositFee">First Tax:</label>
+          <input type="number" id="interestRate" class="inputsWidth" placeholder="Enter an interest rate %" value="5">
+        </div>
+        <div class="input-group">
+          <label for="depositFee">Vstupní Poplatek:</label>
 
-        <input type="number" id="depositFee" class="inputsWidth" placeholder="Enter some first tax" value="0">
+          <input type="number" id="depositFee" class="inputsWidth" placeholder="Enter some first tax" value="0">
+        </div>
+        <div class="input-group">
+          <label for="feeYearly">Roční Poplatek:</label>
+          <input type="number" id="feeYearly" class="inputsWidth" placeholder="Enter some second tax" value="0">
+        </div>
       </div>
-      <div class="input-group">
-        <label for="feeYearly">Second Tax:</label>
-        <input type="number" id="feeYearly" class="inputsWidth" placeholder="Enter some second tax" value="0">
+
+
+
+
+
+
+      <!-- Right Column -->
+      <div class="right-column">
+
+        <div class="input-group">
+          <label for="nameOfInvestment">Jméno Investice:</label>
+          <input type="text" id="nameOfInvestment2" class="inputsWidth" placeholder="Name Of Investment">
+        </div>
+        <div class="input-group">
+          <label for="firstDeposit">Vstupní Vklad:</label>
+
+          <input type="number" id="firstDeposit2" class="inputsWidth" placeholder="First deposit amount" value="1000">
+        </div>
+
+        <div class="input-group">
+          <label for="monthlyDeposit">Měsíční Vklad:</label>
+
+
+          <input type="number" id="monthlyDeposit2" class="inputsWidth" placeholder="Monthly deposit amount" value="0">
+        </div>
+
+        <div class="input-group">
+          <label for="interestRate">Zhodnocení (%):</label>
+
+
+          <input type="number" id="interestRate2" class="inputsWidth" placeholder="Enter an interest rate %" value="5">
+        </div>
+
+        <div class="input-group">
+          <label for="depositFee">Vstupní Poplatek:</label>
+          <input type="number" id="depositFee2" class="inputsWidth" placeholder="Enter some first tax" value="0">
+        </div>
+
+        <div class="input-group">
+          <label for="feeYearly">Roční Poplatek:</label>
+          <input type="number" id="feeYearly2" class="inputsWidth" placeholder="Enter some second tax" value="0">
+        </div>
       </div>
     </div>
 
+    <div class="centerPls">
 
 
 
 
 
-    <!-- Right Column -->
-    <div class="right-column">
-
-      <input type="text" id="nameOfInvestment2" class="inputsWidth" placeholder="Name Of Investment">
-
-      <input type="number" id="firstDeposit2" class="inputsWidth" placeholder="First deposit amount" value="1000">
 
 
-      <input type="number" id="monthlyDeposit2" class="inputsWidth" placeholder="Monthly deposit amount" value="0">
+      <!-- Results -->
+      <div class="results">
+        <!-- Left Results -->
+        <div class="leftResults">
+
+          <div class="input-groupResults">
+            <label for="totalDeposittedResult">Celkem Vloženo:</label>
+            <div class="totalDeposittedResult">
+            </div>
+          </div>
+          <div class="input-groupResults">
+            <label for="totalDeposittedResult">Celkem k Vybrání:</label>
+            <div class="totalToWithdrawResult">
+            </div>
+          </div>
+          <div class="input-groupResults">
+            <label for="totalDeposittedResult">Celkový Nárust:</label>
+            <div class="percentageGainResult">
+            </div>
+          </div>
+        </div>
+
+        <div class="durationAndCreateBtn">
+          <div class="inputDuration">
+            <label for="investmentDuration">Investiční Doba:</label>
+            <input type="number" id="investmentDuration" placeholder="Enter the duration in years" value="10">
+          </div>
+          <input type="submit" id="submitInput" class="inputsWidth" value="Vytvořit graf"
+            style="display: block; margin: 20px auto;">
+        </div>
+
+        <!-- Right Results -->
+        <div class="rightResults">
+          <div class="input-groupResults">
+            <label for="totalDeposittedResult">Celkem Vloženo:</label>
+            <div class="totalDeposittedResult2">
+            </div>
+          </div>
+          <div class="input-groupResults">
+            <label for="totalDeposittedResult">Celkem k Vybrání:</label>
+            <div class="totalToWithdrawResult2">
+            </div>
+          </div>
+          <div class="input-groupResults">
+            <label for="totalDeposittedResult">Celkový Nárust:</label>
+            <div class="percentageGainResult2">
+            </div>
+          </div>
+        </div>
+      </div>
 
 
-      <input type="number" id="interestRate2" class="inputsWidth" placeholder="Enter an interest rate %" value="5">
-
-
-      <input type="number" id="depositFee2" class="inputsWidth" placeholder="Enter some first tax" value="0">
-
-
-      <input type="number" id="feeYearly2" class="inputsWidth" placeholder="Enter some second tax" value="0">
 
     </div>
   </div>
 
-  <div class="centerPls">
-
-    <div class="input-group">
-      <label for="investmentDuration">Investment Duration:</label>
-      <input type="number" id="investmentDuration" placeholder="Enter the duration in years" value="10">
-    </div>
-
-    <input type="submit" id="submitInput" class="inputsWidth" value="Vytvořit graf"
-      style="display: block; margin: 20px auto;">
-  </div>
-  <!-- Results -->
-  <div class="results">
-    <!-- Left Results -->
-    <div class="leftResults">
-
-      <div class="input-groupResults">
-        <label for="totalDeposittedResult">Total Depositted:</label>
-        <div class="totalDeposittedResult">
-        </div>
-      </div>
-      <div class="input-groupResults">
-        <label for="totalDeposittedResult">Total To Withdraw:</label>
-        <div class="totalToWithdrawResult">
-        </div>
-      </div>
-      <div class="input-groupResults">
-        <label for="totalDeposittedResult">Total Gain (%):</label>
-        <div class="percentageGainResult">
-        </div>
-      </div>
-    </div>
-
-
-    <!-- Right Results -->
-    <div class="rightResults">
-      <div class="input-groupResults">
-        <label for="totalDeposittedResult">Total Depositted:</label>
-        <div class="totalDeposittedResult2">
-        </div>
-      </div>
-      <div class="input-groupResults">
-        <label for="totalDeposittedResult">Total To Withdraw:</label>
-        <div class="totalToWithdrawResult2">
-        </div>
-      </div>
-      <div class="input-groupResults">
-        <label for="totalDeposittedResult">Total Gain (%):</label>
-        <div class="percentageGainResult2">
-        </div>
-      </div>
-    </div>
-  </div>
 
 
 
