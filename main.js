@@ -77,6 +77,49 @@ document.getElementById("submitInput").addEventListener("click", function (event
   document.querySelector(".totalDeposittedResult2").innerHTML = Math.round(totalDepositted2);
   document.querySelector(".percentageGainResult2").innerHTML = Math.round(((total2 - totalDepositted2) / totalDepositted2) * 100) + "%";
 
+
+  const numberFormatter = new Intl.NumberFormat('fr-FR');
+
+  function formatAllNumbers() {
+    // Query all elements where you want to format numbers (e.g., div, span, p)
+    const numberElements = document.querySelectorAll('.number-format'); // Assume all number-containing elements have this class
+
+    numberElements.forEach((element) => {
+      const number = parseFloat(element.innerText.replace(/\s+/g, '')); // Remove spaces before parsing
+      if (!isNaN(number)) {  // Check if it's a valid number
+        element.innerText = numberFormatter.format(number);
+      }
+    });
+  }
+
+
+
+  document.addEventListener('DOMContentLoaded', formatAllNumbers);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   // Define investment names
   let investmentName = document.getElementById("nameOfInvestment").value;
   let investmentName2 = document.getElementById("nameOfInvestment2").value;
