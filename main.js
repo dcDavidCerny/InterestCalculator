@@ -34,6 +34,7 @@ document.getElementById("submitInput").addEventListener("click", function (event
   document.querySelector(".totalDeposittedResult").innerHTML = Math.round(totalDepositted);
   document.querySelector(".percentageGainResult").innerHTML = Math.round(((total - totalDepositted) / totalDepositted) * 100) + "%";
 
+  // Update labels visibility and names
   document.querySelectorAll("#resultLabel").forEach((label) => {
     label.style.visibility = "visible";
   });
@@ -77,48 +78,21 @@ document.getElementById("submitInput").addEventListener("click", function (event
   document.querySelector(".totalDeposittedResult2").innerHTML = Math.round(totalDepositted2);
   document.querySelector(".percentageGainResult2").innerHTML = Math.round(((total2 - totalDepositted2) / totalDepositted2) * 100) + "%";
 
-
+  // Number formatting for all numbers
   const numberFormatter = new Intl.NumberFormat('fr-FR');
 
   function formatAllNumbers() {
-    // Query all elements where you want to format numbers (e.g., div, span, p)
-    const numberElements = document.querySelectorAll('.number-format'); // Assume all number-containing elements have this class
-
+    const numberElements = document.querySelectorAll('.number-format');
     numberElements.forEach((element) => {
-      const number = parseFloat(element.innerText.replace(/\s+/g, '')); // Remove spaces before parsing
-      if (!isNaN(number)) {  // Check if it's a valid number
+      const number = parseFloat(element.innerText.replace(/\s+/g, ''));
+      if (!isNaN(number)) {
         element.innerText = numberFormatter.format(number);
       }
     });
   }
 
-
-
-  document.addEventListener('DOMContentLoaded', formatAllNumbers);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  // Call the function to format all numbers
+  formatAllNumbers();
 
   // Define investment names
   let investmentName = document.getElementById("nameOfInvestment").value;
@@ -126,7 +100,6 @@ document.getElementById("submitInput").addEventListener("click", function (event
 
   // Chart initialization
   const ctx = document.getElementById('myChart');
-
   const labels = [];
   for (let i = 1; i <= investmentDuration; i++) {
     labels.push(`${i}. Rok`);
