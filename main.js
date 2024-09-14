@@ -1,5 +1,5 @@
-import Chart from 'chart.js/auto';
-
+import { Chart, registerables } from './node_modules/chart.js/dist/chart.js';
+Chart.register(...registerables);
 let chartInstance; // Declare chartInstance globally
 
 document.getElementById("submitInput").addEventListener("click", function (event) {
