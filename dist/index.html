@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+  <script type="module" crossorigin src="/assets/index-00_TVLdG.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-Cpe0fqZw.css">
+</head>
+
+<body>
+  <div class="extraContainer">
+    <div class="container">
+      <!-- Left Column -->
+      <div class="left-column">
+        <div class="input-group">
+          <label for="nameOfInvestment">Jméno Investice:</label>
+          <input type="text" id="nameOfInvestment" class="inputsWidth" placeholder="Name Of Investment">
+        </div>
+        <div class="input-group">
+          <label for="firstDeposit">Vstupní Vklad:</label>
+          <input type="number" id="firstDeposit" class="inputsWidth" placeholder="First deposit amount" value="1000">
+        </div>
+        <div class="input-group">
+          <label for="monthlyDeposit">Měsíční Vklad:</label>
+          <input type="number" id="monthlyDeposit" class="inputsWidth" placeholder="Monthly deposit amount" value="0">
+        </div>
+        <div class="input-group">
+          <label for="interestRate">Zhodnocení (%):</label>
+
+          <input type="number" id="interestRate" class="inputsWidth" placeholder="Enter an interest rate %" value="5">
+        </div>
+        <div class="input-group">
+          <label for="depositFee">Vstupní Poplatek:</label>
+
+          <input type="number" id="depositFee" class="inputsWidth" placeholder="Enter some first tax" value="0">
+        </div>
+        <div class="input-group">
+          <label for="feeYearly">Roční Poplatek (%):</label>
+          <input type="number" id="feeYearly" class="inputsWidth" placeholder="Enter some second tax" value="0">
+        </div>
+      </div>
+
+
+
+
+
+
+      <!-- Right Column -->
+      <div class="right-column">
+
+        <div class="input-group">
+          <label for="nameOfInvestment">Jméno Investice:</label>
+          <input type="text" id="nameOfInvestment2" class="inputsWidth" placeholder="Name Of Investment">
+        </div>
+        <div class="input-group">
+          <label for="firstDeposit">Vstupní Vklad:</label>
+
+          <input type="number" id="firstDeposit2" class="inputsWidth" placeholder="First deposit amount" value="1000">
+        </div>
+
+        <div class="input-group">
+          <label for="monthlyDeposit">Měsíční Vklad:</label>
+
+
+          <input type="number" id="monthlyDeposit2" class="inputsWidth" placeholder="Monthly deposit amount" value="0">
+        </div>
+
+        <div class="input-group">
+          <label for="interestRate">Zhodnocení (%):</label>
+
+
+          <input type="number" id="interestRate2" class="inputsWidth" placeholder="Enter an interest rate %" value="5">
+        </div>
+
+        <div class="input-group">
+          <label for="depositFee">Vstupní Poplatek:</label>
+          <input type="number" id="depositFee2" class="inputsWidth" placeholder="Enter some first tax" value="0">
+        </div>
+
+        <div class="input-group">
+          <label for="feeYearly">Roční Poplatek (%):</label>
+          <input type="number" id="feeYearly2" class="inputsWidth" placeholder="Enter some second tax" value="0">
+        </div>
+      </div>
+    </div>
+
+    <div class="centerPls">
+
+
+
+
+
+
+
+      <!-- Results -->
+      <div class="results">
+        <!-- Left Results -->
+        <div class="leftResults">
+
+          <div class="input-groupResults">
+            <h3 class="nameOfInvestmentH3A"></h3>
+          </div>
+          <div class="input-groupResults">
+            <label for="totalDeposittedResult" id="resultLabel">Celkem Vloženo:&nbsp;&nbsp;&nbsp;</label>
+            <div class="totalDeposittedResult number-format">
+            </div>
+          </div>
+          <div class="input-groupResults">
+            <label for="totalToWithdrawResult" id="resultLabel">Celkem k Vybrání:&nbsp;&nbsp;&nbsp;</label>
+            <div class="totalToWithdrawResult number-format">
+            </div>
+          </div>
+          <div class="input-groupResults">
+            <label for="percentageGainResult" id="resultLabel">Celkový Nárust:&nbsp;&nbsp;&nbsp;</label>
+            <div class="percentageGainResult">
+            </div>
+          </div>
+        </div>
+
+        <div class="durationAndCreateBtn">
+          <div class="inputDuration">
+            <label for="investmentDuration">Investiční Doba:</label>
+            <input type="number" id="investmentDuration" class="inputsWidth" placeholder="Enter the duration in years"
+              value="10">
+          </div>
+          <input type="submit" id="submitInput" class="inputsWidth" value="VYTVOŘIT GRAF"
+            style="display: block; margin: 20px auto;">
+        </div>
+
+        <!-- Right Results -->
+        <div class="rightResults">
+          <div class="input-groupResults">
+            <h3 class="nameOfInvestmentH3B"></h3>
+          </div>
+          <div class="input-groupResults">
+            <label for="totalDeposittedResult2" id="resultLabel">Celkem Vloženo:&nbsp;&nbsp;&nbsp;</label>
+            <div class="totalDeposittedResult2 number-format">
+            </div>
+          </div>
+          <div class="input-groupResults">
+            <label for="totalToWithdrawResult2" id="resultLabel">Celkem k Vybrání:&nbsp;&nbsp;&nbsp;</label>
+            <div class="totalToWithdrawResult2 number-format">
+            </div>
+          </div>
+          <div class="input-groupResults">
+            <label for="percentageGainResult2" id="resultLabel">Celkový Nárust:&nbsp;&nbsp;&nbsp;</label>
+            <div class="percentageGainResult2">
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+
+
+
+
+  <div class="canvas">
+    <div class="canvas2">
+      <canvas id="myChart"></canvas>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+
+</html>
