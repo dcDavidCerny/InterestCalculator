@@ -32,6 +32,7 @@ document.getElementById("submitInput").addEventListener("click", function (event
   // Display first investment results
   document.querySelector(".totalToWithdrawResult").innerHTML = Math.round(total);
   document.querySelector(".totalDeposittedResult").innerHTML = Math.round(totalDepositted);
+  document.querySelector(".profitResult").innerHTML = Math.round(total - totalDepositted);
   document.querySelector(".percentageGainResult").innerHTML = Math.round(((total - totalDepositted) / totalDepositted) * 100) + "%";
 
   // Update labels visibility and names
@@ -76,6 +77,7 @@ document.getElementById("submitInput").addEventListener("click", function (event
   // Display second investment results
   document.querySelector(".totalToWithdrawResult2").innerHTML = Math.round(total2);
   document.querySelector(".totalDeposittedResult2").innerHTML = Math.round(totalDepositted2);
+  document.querySelector(".profitResult2").innerHTML = Math.round(total2 - totalDepositted2);
   document.querySelector(".percentageGainResult2").innerHTML = Math.round(((total2 - totalDepositted2) / totalDepositted2) * 100) + "%";
 
   // Number formatting for all numbers
@@ -164,6 +166,4 @@ document.getElementById("submitInput").addEventListener("click", function (event
       }
     }
   });
-
-  console.log('Delete me later');
 });
